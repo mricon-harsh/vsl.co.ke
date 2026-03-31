@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Valentine ❤️</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="loader" id="loader">
+    <div class="loader-inner">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+    </div>
+    <p>Preparing your love story...</p>
+</div>
+
+<video id="bgVideo" autoplay muted loop playsinline poster="assets/images/poster.jpg">
+    <source src="assets/video/bg.mp4" type="video/mp4">
+    Sorry, your browser does not support HTML5 video.
+</video>
+<div class="video-overlay"></div>
+
+<main id="content" class="hidden">
+
+    <section id="lockPage" class="card fade-in">
+        <h1>🔒 OUR LOVE PAGE 🔒</h1>
+        <p>Enter the secret password to unlock our story ❤️</p>
+
+        <div class="input-row">
+            <input type="password" id="passwordInput" placeholder="Type your secret..." aria-label="Password">
+            <button id="unlockBtn" class="btn btn-primary">Enter 💖</button>
+        </div>
+
+        <p id="passwordError" class="error"></p>
+    </section>
+
+    <section id="page1" class="card hidden">
+        <h1 class="title">💖 Hilda, My Love 💖</h1>
+        <h2>Will you be my Valentine? 💘</h2>
+
+        <div class="action-row">
+            <button id="yesBtn" class="btn btn-yes">YES 😍</button>
+            <button id="noBtn" class="btn btn-no">NO 😢</button>
+        </div>
+
+        <p id="noText" class="subtitle"></p>
+    </section>
+
+    <section id="page2" class="card hidden">
+        <h1>YESSSSS!!! 😍😍😍</h1>
+        <h2>ILYM 💕</h2>
+        <h3>Our Beautiful Memories 📸</h3>
+
+        <div class="gallery" id="gallery">
+            <img src="assets/images/photo1.jpeg">
+            <img src="assets/images/photo2.jpeg" alt="Memory 2" data-src="assets/images/photo2.jpeg">
+            <img src="assets/images/photo3.jpeg" alt="Memory 3" data-src="assets/images/photo3.jpeg">
+            <img src="assets/images/photo4.jpeg" alt="Memory 4" data-src="assets/images/photo4.jpeg">
+            <img src="assets/images/photo5.jpeg" alt="Memory 5" data-src="assets/images/photo5.jpeg">
+            <img src="assets/images/photo6.jpeg" alt="Memory 6" data-src="assets/images/photo6.jpeg">
+        </div>
+
+        <button id="nextToPage3" class="btn btn-primary">Continue 💖</button>
+    </section>
+
+    <section id="page3" class="card hidden">
+        <h1>💌 My Love Message 💌</h1>
+
+        <p id="typingMessage" class="love-text"></p>
+
+        <div class="music-row">
+            <button id="playMusicBtn" class="btn btn-primary">Play Our Song 💞</button>
+            <audio id="finalSong" preload="none">
+                <source src="assets/audio/song.mpeg" type="audio/mpeg">
+            </audio>
+        </div>
+
+        <h2>Thank You My Love!! 💖</h2>
+        <h3>I Love You So Much 😘❤️</h3>
+    </section>
+
+</main>
+
+<div id="lightbox" class="lightbox hidden" aria-hidden="true">
+    <div class="lightbox-content">
+        <button id="lightboxClose" class="close-btn" aria-label="Close">&times;</button>
+        <img id="lightboxImage" src="" alt="Enlarged memory">
+    </div>
+</div>
+
+<div id="floatingHearts" class="floating-hearts"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
